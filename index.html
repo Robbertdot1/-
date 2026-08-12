@@ -301,10 +301,6 @@ font: 1em sans-serif;
         <span id="users">32 online</span>
     </div>
 
- <div class="RIGHT" id="islamicDate">Islamic Date</div>
-    
-</div>
-
 
 <!-- PLAYER -->
 <div class="player">
@@ -341,18 +337,7 @@ function updateTime(){
 }
 setInterval(updateTime,1000);
 updateTime();
-// ================= ISLAMIC DATE =================
-function updateIslamicDate() {
-    const date = new Date();
-    const islamic = new Intl.DateTimeFormat('en-TN-u-ca-islamic', {
-        day: 'numeric',
-        month: 'long',
-        year: 'numeric'
-    }).format(date);
 
-    document.getElementById("islamicDate").innerText = islamic;
-}
-updateIslamicDate();
 // USERS
 function users(){
     let num=Math.floor(Math.random()*100)+10;
